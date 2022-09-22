@@ -1,0 +1,10 @@
+
+html
+	body
+		form(action='/productos' method='post')
+			label(for='title') Title
+			input(type='text' name='title' id='title')
+			label(for='price') Price
+			input(type='text' name='price' id='price')
+			button(type="submit") Submit
+		a(href='/productos') Show Products

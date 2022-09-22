@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Casco",
+    "price": 500,
+    "thumbnail": "casco1",
+    "id": 1
+  },
+  {
+    "title": "Casco2",
+    "price": 500,
+    "thumbnail": "casco12",
+    "id": 2
+  },
+  {
+    "title": "Casco3",
+    "price": 500,
+    "thumbnail": "casco13",
+    "id": 3
+  },
+  {
+    "title": "Casco4",
+    "price": 500,
+    "thumbnail": "casco14",
+    "id": 4
+  },
+  {
+    "title": "Casco5",
+    "price": 500,
+    "thumbnail": "casco5",
+    "id": 5
+  }
+]

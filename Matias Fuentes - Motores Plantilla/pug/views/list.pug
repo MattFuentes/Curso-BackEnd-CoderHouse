@@ -1,0 +1,17 @@
+html
+    body
+        div
+        #productos
+            if productos
+                table
+                    tr
+                        th Name
+                        th Price
+                    each producto in productos
+                        tr
+                            td= producto.title
+                            td= producto.price
+            else
+                span No Products to Show
+        a(href='/') Add Product
+
