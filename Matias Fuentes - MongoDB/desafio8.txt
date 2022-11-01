@@ -1,0 +1,246 @@
+use desafiomongodb
+
+# Crear DB llamada ECOMMERCE
+
+use ecommerce
+
+# Crear 2 colecciones
+
+db.createCollection('message')
+db.createCollection('product')
+
+# Mostrar colecciones
+
+show collections
+
+# Consultas
+
+db.message.insertOne({email:"matthew@email.com",text:"AAA",date:ISODate()})
+db.message.insertOne({email:"juan@email.com",text:"BBB",date:ISODate()})
+db.message.insertOne({email:"santiago@email.com",text:"CCC",date:ISODate()})
+db.message.insertOne({email:"mar@email.com",text:"DDD",date:ISODate()})
+db.message.insertOne({email:"maria@email.com",text:"EEE",date:ISODate()})
+db.message.insertOne({email:"marilyn@email.com",text:"FFF",date:ISODate()})
+db.message.insertOne({email:"ramiro@email.com",text:"GGG",date:ISODate()})
+db.message.insertOne({email:"juan@email.com",text:"HHH",date:ISODate()})
+db.message.insertOne({email:"santino@email.com",text:"III",date:ISODate()})
+db.message.insertOne({email:"juancruz@email.com",text:"JJJ",date:ISODate()})
+
+# Productos
+db.product.insertMany([{title:"Lenovo 3000", precio:430, thumbnail:"url"},{title:"TV SAMSUNG 50", precio:500, thumbnail:"url"},{title:"i3", precio:600, thumbnail:"url"},{title:"i5", precio:420, thumbnail:"url"},{title:"i7", precio:500, thumbnail:"url"},{title:"i9", precio:1000, thumbnail:"url"},{title:"SMARTPHONE SAMSUNG A21", precio:2000, thumbnail:"url"},{title:"SMARTPHONE MOTOROLA G22", precio:3000, thumbnail:"url"},{title:"NOTEBOOK APPLE MAC PRO ", precio:4000, thumbnail:"url"}])
+
+db.message.find()
+[
+  {
+    _id: ObjectId("635f091227621da878ca5d5b"),
+    email: 'matthew@email.com',
+    text: 'AAA',
+    date: ISODate("2022-10-30T23:30:26.514Z")
+  },
+  {
+    _id: ObjectId("635f096227621da878ca5d5c"),
+    email: 'juan@email.com',
+    text: 'BBB',
+    date: ISODate("2022-10-30T23:31:46.322Z")
+  },
+  {
+    _id: ObjectId("635f0bd927621da878ca5d5d"),
+    email: 'santiago@email.com',
+    text: 'CCC',
+    date: ISODate("2022-10-30T23:42:17.738Z")
+  },
+  {
+    _id: ObjectId("635f0c0927621da878ca5d5e"),
+    email: 'mar@email.com',
+    text: 'DDD',
+    date: ISODate("2022-10-30T23:43:05.422Z")
+  },
+  {
+    _id: ObjectId("635f0c1827621da878ca5d5f"),
+    email: 'maria@email.com',
+    text: 'EEE',
+    date: ISODate("2022-10-30T23:43:20.923Z")
+  },
+  {
+    _id: ObjectId("635f0c3527621da878ca5d60"),
+    email: 'marilyn@email.com',
+    text: 'FFF',
+    date: ISODate("2022-10-30T23:43:49.533Z")
+  },
+  {
+    _id: ObjectId("635f0c4727621da878ca5d61"),
+    email: 'ramiro@mail.com',
+    text: 'GGG',
+    date: ISODate("2022-10-30T23:44:07.878Z")
+  },
+  {
+    _id: ObjectId("635f0c5727621da878ca5d62"),
+    email: 'juan@email.com',
+    text: 'HHH',
+    date: ISODate("2022-10-30T23:44:23.530Z")
+  },
+  {
+    _id: ObjectId("635f0c6227621da878ca5d63"),
+    email: 'santino@email.com',
+    text: 'III',
+    date: ISODate("2022-10-30T23:44:34.191Z")
+  },
+  {
+    _id: ObjectId("635f0c6b27621da878ca5d64"),
+    email: 'juancruz@mail.com',
+    text: 'JJJ',
+    date: ISODate("2022-10-30T23:44:43.914Z")
+  }
+]
+db.product.find()
+
+[
+  {
+    _id: ObjectId("635f15a627621da878ca1d10"),
+    title: 'Lenovo 3000',
+    precio: 430,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d11"),
+    title: 'TV SAMSUNG 50',
+    precio: 500,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d12"),
+    title: 'i3',
+    precio: 600,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d13"),
+    title: 'i5',
+    precio: 420,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d14"),
+    title: 'i7',
+    precio: 500,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d15"),
+    title: 'i9',
+    precio: 1000,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d16"),
+    title: 'SMARTPHONE SAMSUNG A21',
+    precio: 2000,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d17"),
+    title: 'SMARTPHONE MOTOROLA G22',
+    precio: 3000,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d18"),
+    title: 'NOTEBOOK APPLE MAC PRO ',
+    precio: 4000,
+    thumbnail: 'url'
+  }
+]
+
+# Cantidad documentos
+db.message.countDocuments()
+
+db.product.countDocuments()
+
+db.product.insertOne({title:"AAA",precio:4500,thumbnail:"url"})
+
+# Realizar consulta
+
+
+# Listar productos menores a 1000
+
+db.product.find({precio:{$lt:1000}})
+
+[
+  {
+    _id: ObjectId("635f15a627621da878ca1d10"),
+    title: 'Lenovo 3000',
+    precio: 430,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d11"),
+    title: 'TV SAMSUNG 50',
+    precio: 500,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d12"),
+    title: 'i3',
+    precio: 600,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d13"),
+    title: 'i5',
+    precio: 420,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d14"),
+    title: 'i7',
+    precio: 500,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d15"),
+    title: 'i9',
+    precio: 1000,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d16"),
+    title: 'SMARTPHONE SAMSUNG A21',
+    precio: 2000,
+    thumbnail: 'url'
+  },
+  {
+    _id: ObjectId("635f15a627621da878ca1d17"),
+    title: 'SMARTPHONE MOTOROLA G22',
+    precio: 3000,
+    thumbnail: 'url'
+  }
+]
+
+# Lista Productos > 1000
+
+db.product.find({$and:[{precio:{$gte:1000}},{precio:{$lte:3000}}]})
+
+
+# Listar productos > 3000
+
+db.product.find({precio:{$gt:3000}});
+
+# Listar producto mas bajo
+
+db.product.find({},{_id:0,title:1}).sort({precio:1}).limit(1).skip(2)
+
+# Agregar STOCK
+
+db.product.updateMany({},{$set:{stock:100}})
+
+# Cambiar STOCK a 0 productos menor a 4000
+
+db.product.updateMany({precio:{$gt:4000}},{$set:{stock:0}})
+
+# Eliminar productos menores a 1000
+
+db.product.deleteMany({precio:{$lt:1000}})
+
+# Usuario Administrador
+
+db.createUser({user:"Matias",pass:"123456matt",roles:[{role:"admin",db:"eccommerce"}]})
