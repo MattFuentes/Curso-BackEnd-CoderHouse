@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "timeStamp": 166532241261,
+    "productos": [
+      {
+        "nombre": "Lenovo Ideapad",
+        "descripcion": "Ideapad 3",
+        "codigo": 57455,
+        "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lenovo.com%2Far%2Fes%2Flaptops%2Fideapad%2Fserie-300%2FIdeaPad-3i-15-inch-Intel%2Fp%2FLEN101I0027&psig=AOvVaw0IDeyEqi5YTp_a6bzji_F6&ust=1668558897609000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNDQ2rX4rvsCFQAAAAAdAAAAABAE",
+        "precio": 15000,
+        "stock": 5,
+        "id": 1,
+        "timeStamp": 166532241261
+      }
+    ]
+  }
+]

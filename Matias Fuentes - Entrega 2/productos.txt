@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "iPhone 14 Pro",
+    "descripcion": "La mejor experiencia en smartphones",
+    "codigo": 57455,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.telstra.com.au%2Fmobile-phones%2Fmobiles-on-a-plan%2Fapple%2Fiphone-14-pro-max&psig=AOvVaw1Mq9HS4lGNM9BF2GS7FSNq&ust=1667921075560000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOCkgKywnPsCFQAAAAAdAAAAABAE",
+    "precio": 1000,
+    "stock": 20,
+    "id": 2,
+    "timeStamp": 1665033641261
+  },
+  {
+    "nombre": "MacBook Pro 13",
+    "descripcion": "La laptop mas potente",
+    "codigo": 57456,
+    "foto": "https://www.google.com/url?sa=i&url=https%3A%2F%2Flistado.mercadolibre.com.ve%2Flaptops-accesorios%2Fapple%2Fmacbook-pro%2F&psig=AOvVaw3JS7EMspXKFzs9OePahqrv&ust=1667921163248000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPDb3dWwnPsCFQAAAAAdAAAAABAJ",
+    "precio": 2500,
+    "stock": 20,
+    "id": 1,
+    "timeStamp": 1665033622401
+  },
+  {
+    "nombre": "Chicle",
+    "descripcion": "El mas duradero",
+    "codigo": 57457,
+    "foto": "https://images.samsung.com/co/smartphones/galaxy-s22-ultra/buy/S22_Ultra_ProductKV_White_PC.jpg?imwidth=1366",
+    "precio": 1000,
+    "stock": 10,
+    "timeStamp": 1665033753175,
+    "id": 3
+  }
+]
